@@ -12,6 +12,7 @@ Consigli del giorno
 - Scriviamo sempre solo un pezzetto di codice alla volta e verifichiamo (il console.log è nostro amico), se funziona allora andiamo avanti.
 
 */
+// 1
 
 const student = {
     nome: 'Ciccio',
@@ -22,7 +23,7 @@ const student = {
 
 console.log(student)
 const displayElement = document.getElementById('student')
-
+// 2
 let allKeys = '';
 for (let key in student) {
     console.log(key)
@@ -30,4 +31,38 @@ for (let key in student) {
 }
 
 
-displayElement.innerText += `${allKeys}`
+// displayElement.innerText += `${allKeys}`
+
+// 3
+
+const students = [
+    { name: 'Francesco', cognome: 'Totò', eta: 28 },
+    { name: 'Michele', cognome: 'Rossi', eta: 21 },
+    { name: 'Carlo', cognome: 'Rizzo', eta: 22 },
+    { name: 'Giovanni', cognome: 'Raggi', eta: 25 },
+]
+
+// 4
+
+let allStudents = '';
+
+for (let i = 0; i < students.length; i++) {
+    let classStudents = students[i];
+    for (let key in classStudents) {
+        if (key !== 'età') {
+            allStudents += [key + ':' + classStudents[key] + ' ']
+        }
+    }
+}
+
+displayElement.innerText += `${allStudents}`
+
+// 5
+
+let userName = prompt('Inserisci un nome').trim();
+let surname = prompt('Inserisci un cognome').trim();
+let age = prompt("Inserisci l'età").trim();
+
+const newClass = [];
+newClass.push(userName, surname, age);
+console.log(newClass)
