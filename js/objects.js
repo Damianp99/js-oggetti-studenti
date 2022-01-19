@@ -20,13 +20,14 @@ const student = {
 
 }
 
-// console.log(student) 
+console.log(student)
 const displayElement = document.getElementById('student')
 
-
+let allKeys = '';
 for (let key in student) {
-    // console.log(key)
-    displayElement.innerText = (`${key} : ${student[key]}`)
+    console.log(key)
+    allKeys += [key + ':' + student[key] + ' ']
 }
 
 
+displayElement.innerText += `${allKeys}`
