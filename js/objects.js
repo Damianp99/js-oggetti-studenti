@@ -17,4 +17,16 @@ const student = {
     nome: 'Ciccio',
     cognome: 'Panza',
     età: 21,
+
 }
+
+// console.log(student) 
+const displayElement = document.getElementById('student')
+
+
+for (let key in student) {
+    // console.log(key)
+    displayElement.innerText = (`${key} : ${student[key]}`)
+}
+
+
