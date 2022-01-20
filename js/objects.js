@@ -18,7 +18,6 @@ const student = {
     nome: 'Ciccio',
     cognome: 'Panza',
     età: 21,
-
 }
 
 console.log(student)
@@ -50,7 +49,7 @@ for (let i = 0; i < students.length; i++) {
     let classStudents = students[i];
     for (let key in classStudents) {
         if (key !== 'età') {
-            allStudents += [key + ':' + classStudents[key] + ' ']
+            allStudents += key + ':' + classStudents[key] + ' ';
         }
     }
 }
@@ -66,3 +65,5 @@ let age = prompt("Inserisci l'età").trim();
 const newClass = [];
 newClass.push(userName, surname, age);
 console.log(newClass)
+
+// PROVA IL BONUS
