@@ -26,7 +26,7 @@ const displayElement = document.getElementById('student')
 let allKeys = '';
 for (let key in student) {
     console.log(key)
-    allKeys += [key + ':' + student[key] + ' ']
+    allKeys += key + ':' + student[key] + ' ';
 }
 
 
@@ -49,12 +49,12 @@ for (let i = 0; i < students.length; i++) {
     let classStudents = students[i];
     for (let key in classStudents) {
         if (key !== 'età') {
-            allStudents += key + ':' + classStudents[key] + ' ';
+            allStudents += `<div><strong> ${key} :</strong> ${classStudents[key]}  </div>`
         }
     }
 }
 
-displayElement.innerText += `${allStudents}`
+displayElement.innerHTML += `${allStudents}`
 
 // 5
 
